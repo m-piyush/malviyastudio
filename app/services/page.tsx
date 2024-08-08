@@ -31,7 +31,7 @@ const Services = () => {
         },
         {
             title: 'KID PHOTOGRAPHY',
-            src: '/Kid1.jpg',
+            src: '/kid.jpg',
             description: 'Celebrate the joy and innocence of childhood with our kid photography sessions. We capture the genuine smiles, playful moments, and unique personalities of your little ones that you\'ll treasure for a lifetime.',
         },
     ];
