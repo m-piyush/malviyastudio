@@ -21,19 +21,27 @@ const Portfolio = () => {
     ];
 
     return (
-        <div>
-            <Image
-                width={"100%"}
-                src="/portfolio_text.jpg"
-                preview={false}
-                alt="portfolio_text"
-            />
-            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4'>
-
+        <div className="bg-white mt-20">
+            {/* Header Image with colorful background */}
+            <div className="relative">
+                <Image
+                    width={"100%"}
+                    src="/portfolio_text.jpg"
+                    preview={false}
+                    alt="portfolio_text"
+                    className="border-b-4 border-red-400"
+                />
+            </div>
+            
+            {/* Portfolio Images Grid */}
+            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6'>
                 {images.map((src, index) => (
-                    <div key={index} className='relative overflow-hidden'>
+                    <div
+                        key={index}
+                        className='relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl'
+                    >
                         <Image
-                            className='transition-transform duration-150 transform hover:scale-125 w-full z-0'
+                            className='transition-transform duration-300 transform hover:scale-110 w-full rounded-lg'
                             src={src}
                             preview={false}
                             alt={`Image ${index + 1}`}
@@ -43,7 +51,6 @@ const Portfolio = () => {
                 ))}
             </div>
         </div>
-
     );
 }
 

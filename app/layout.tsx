@@ -26,7 +26,7 @@ export default function RootLayout({
 
         {/* Floating Contact Us Button */}
         <div className="fixed bottom-4 right-4 z-50  md:w-[120px] w-50px" >
-          <a href="tel:8299338931" className="bg-rose-500 text-white p-4 rounded-full shadow-lg flex justify-evenly items-center hover:bg-rose-600 transition-colors">
+          <a href="tel:8299338931" className="bg-gradient-to-r from-blue-600 via-green-500 to-teal-400  text-white p-4 rounded-full shadow-lg flex justify-evenly items-center hover:bg-rose-600 transition-colors">
             <IoCall />
 
             <p className="md:flex hidden">  Call us </p>
