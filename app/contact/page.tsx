@@ -31,7 +31,7 @@ const Contact = () => {
 
     return (
         <>
-            <div className="flex flex-col md:flex-row">
+            <div className="flex flex-col md:flex-row mt-20">
                 <div className="border-2 mx-auto my-4 relative w-[90%] md:w-1/2 h-64 md:h-auto">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3596.4175006956907!2d81.83121908505144!3d25.449794799426638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399acbbd8fa40337%3A0xcce9d02d66cea2c!2sMalviya%20Studio!5e0!3m2!1sen!2sin!4v1722870822189!5m2!1sen!2sin"
@@ -43,7 +43,7 @@ const Contact = () => {
                 </div>
                 <div className="flex flex-col items-center p-4 w-full md:w-1/2">
                     <div className="container w-full">
-                        <h2 className="text-2xl font-bold mb-4">Feel free to contact us</h2>
+                        <h2 className="text-2xl font-semibold bg-gradient-to-r from-blue-600 via-green-500 to-teal-400  bg-clip-text text-transparent mb-4">Feel free to contact us</h2>
                         <div className="contact-form">
                             <form onSubmit={handleSubmit} action="https://formspree.io/f/manwozrl" method="POST" className="space-y-4">
                                 <input
@@ -77,7 +77,7 @@ const Contact = () => {
                                 <input
                                     type="submit"
                                     value="Send"
-                                    className="w-full p-2 bg-rose-500 text-white rounded hover:bg-rose-600 transition-colors"
+                                    className="w-full p-2 bg-gradient-to-r from-blue-600 via-green-500 to-teal-400  text-white rounded hover:bg-rose-600 transition-colors"
                                 />
                             </form>
                         </div>

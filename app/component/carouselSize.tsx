@@ -30,9 +30,12 @@ const CarouselComponent: React.FC = () => (
 
         <div style={contentStyle}>
           <a className='flex justify-center flex-col leading-8 mb-5 mr-5' target="_blank" href="https://maps.app.goo.gl/DntJXx8P3tJD77gv7">
-            <p >
+            <p
+              className='text-lg font-bolder bg-gradient-to-r from-yellow-400 via-green-400 to-blue-500 bg-clip-text text-transparent drop-shadow-lg'
+            >
               4.9 on Google
             </p>
+
             <Rate allowHalf defaultValue={4.9} />
           </a>
         </div>

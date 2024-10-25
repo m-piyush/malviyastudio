@@ -1,4 +1,3 @@
-
 import { Image } from 'antd';
 import type { Metadata } from "next";
 
@@ -12,7 +11,7 @@ const Services = () => {
         {
             title: 'WEDDING',
             src: '/wedding.jpg',
-            description: 'Celebrate your big day with stunning wedding photography that captures every heartfelt moment and joyful detail. Our expert team will ensure your wedding memories are beautifully preserved, elegance, and magic of your special day.',
+            description: 'Celebrate your big day with stunning wedding photography that captures every heartfelt moment and joyful detail. Our expert team will ensure your wedding memories are beautifully preserved, reflecting the elegance and magic of your special day.',
         },
         {
             title: 'BRIDAL QUEEN',
@@ -37,37 +36,44 @@ const Services = () => {
     ];
 
     return (
-        <>
+        <div className='mt-20'>
+            {/* Header Image with colorful bottom border */}
             <Image
                 width={"100%"}
                 src="/service.jpg"
                 preview={false}
                 alt="service"
             />
-            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4 w-full md:w-2/3 mx-auto'>
+
+            {/* Services Grid */}
+            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 w-full md:w-4/5 lg:w-3/4 xl:w-2/3 mx-auto'>
                 {services.map((service, index) => (
-                    <div key={index} className='p-4 border border-red-300 relative overflow-hidden'>
-                        <p className='text-[20px] text-gray-700 mb-2'>{service.title}</p>
+                    <div key={index} className='p-6 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 relative overflow-hidden bg-white' >
+                        <p className='text-[22px] font-semibold mb-3 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text text-transparent'>
+                            {service.title}
+                        </p>
                         <Image
-                            className='transition-transform duration-150 transform hover:scale-125 w-full z-0'
+                            className='transition-transform duration-300 transform hover:scale-105 rounded-md'
                             src={service.src}
                             preview={false}
                             alt={service.title}
                             style={{ position: 'relative', zIndex: 1 }}
                         />
-                        <p className='text-[14px] text-gray-500'>{service.description}</p>
+                        <p className='text-[15px] text-justify font-semibold text-gray-600 mt-3'>{service.description}</p>
                     </div>
                 ))}
             </div>
+
+            {/* Footer Image with margin adjustments */}
             <Image
-                className='mt-5 mb-2'
+                className='mt-10 mb-5'
                 width={"100%"}
                 src="/service-bottom.jpg"
                 preview={false}
                 alt="service-bottom"
             />
-        </>
-    )
+        </div >
+    );
 }
 
 export default Services;
